@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+
 # 20 分鐘體驗ruby 練習檔案 from 官方網站
 # https://www.ruby-lang.org/zh_tw/documentation/quickstart/3/
 
@@ -12,7 +13,8 @@ class MegaGreeter
 
   # 向每個人說 hi
   def say_hi
-    if @name.nil?
+#感謝 David 的修正, 我這邊寫成 @name 但是應該要寫 @names
+    if @names.nil?
       puts "..."
     elsif @names.respond_to?("each")
       # @names 是可以迭代的陣列容器
@@ -26,11 +28,13 @@ class MegaGreeter
 
   # 像每個人說 bye
   def say_bye
-    if @name.nil?
+#感謝 David 的修正, 我這邊寫成 @name 但是應該要寫 @names
+    if @names.nil?
       puts "..."
     elsif @names.respond_to?("join")
       # 用逗號將陣列中的元素串接成一個字串
-      put "Goodbye #{@names.join(",")}. Come back soon"
+#這邊不小心把 puts 寫成 put
+      puts "Goodbye #{@names.join(",")}. Come back soon"
     else
       puts "Goodbye #{@names}.  Comeback soon!"
     end
