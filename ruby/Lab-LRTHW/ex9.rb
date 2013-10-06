@@ -1,0 +1,16 @@
+# Here's some new strange stuff, remember type it exactly.
+
+days = "Mon Tue Wed Thu Fri Sat Sun"
+#這邊使用 \n 來進行換行 
+months = "Jan\nFed\nMar\nApr\nMay\nJun\nJul\nAug"
+#puts 後面用接兩個物件, 使用逗號來區隔
+puts "Here are days: ", days
+
+puts "Here are the months: ", months
+
+puts <<PARAGRAPH
+There's something going on here.
+With the three double-quotes.
+We'll be able to type as much as we like.
+Even 4 lines if we want, or 5 or 6.
+PARAGRAPH
