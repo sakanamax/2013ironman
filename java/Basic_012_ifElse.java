@@ -1,7 +1,7 @@
 //這個範例要來練習if判斷式的撰寫
 //因為要使用 BufferedReader, 所以要匯入 java.io.*;
 import java.io.*;
-class Basic_011_if {
+class Basic_012_ifElse {
 
 	public static void main(String[] args) throws IOException
 	{
@@ -15,14 +15,16 @@ class Basic_011_if {
 		
 		//判斷 res 的值 是否為 1
 		//如果 if 的程式只有一行, 就可以直接寫下去
-		//但是還是建議使用大括號來區隔程式碼
 		if(res == 1)
 		{
 			//如果成真就執行顯示System.out.println()
 			System.out.println("輸入的是1");
 		}
-		//如果輸入的不是1 就顯示 結束
-		System.out.println("結束");
+		//如果輸入的不是1(沒有成真) 就顯示 輸入的是1以外的數字
+		else
+		{	
+		System.out.println("輸入的是1以外的數字");
+		}
 
 	}
 
